@@ -18,6 +18,7 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
     <cube-button @click="showToast">show toast</cube-button>
+	<cube-button @click="vibrate">vibrate</cube-button>
   </div>
 </template>
 
@@ -35,6 +36,10 @@ export default {
       this.$createToast({
         txt: this.toastTxt
       }).show()
+    },
+    vibrate () {
+      var time = 3000
+      navigator.vibrate(time)
     }
   }
 }
